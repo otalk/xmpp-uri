@@ -46,5 +46,8 @@
       "ipad/6..latest",
       "android-browser/4.2..latest"
     ]
+  },
+  "dependencies": {
+    "querystring": "^0.2.0"
   }
 }

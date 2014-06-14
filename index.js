@@ -1,4 +1,5 @@
 var url = require('url');
+var querystring = require('querystring');
 
 
 exports.parse = function (xmppURI) {
@@ -8,12 +9,9 @@ exports.parse = function (xmppURI) {
     var parameters = {};
 
     if (query) {
-        var parts = query.split(';');
-        queryType = parts.shift();
-        parts.forEach(function (part) {
-            part = part.split('=');
-            parameters[part[0]] = decodeURIComponent(part[1]);
-        });
+        queryType = query.split(';', 1)[0];
+        query = query.slice(queryType.length + 1);
+        parameters = querystring.decode(query, ';', '=');
     }
 
     var authJID = null;
@@ -63,16 +61,8 @@ exports.create = function (data) {
         parts.push('?');
         parts.push(encodeURIComponent(data.action));
         if (data.parameters) {
-            var keys = Object.keys(data.parameters);
-            keys = keys.sort();
-
-            for (var i = 0; i < keys.length; i++) {
-                var key = keys[i];
-                parts.push(';');
-                parts.push(encodeURIComponent(key));
-                parts.push('=');
-                parts.push(encodeURIComponent(data.parameters[key]));
-            }
+            parts.push(';');
+            parts.push(querystring.encode(data.parameters, ';', '='));
         }
     }
 
