@@ -1,11 +1,11 @@
 # XMPP-URI
 **Parse and Create XMPP URIs**
 
-[![Build Status](https://travis-ci.org/legastero/xmpp-uri.png)](https://travis-ci.org/legastero/xmpp-uri)
-[![Dependency Status](https://david-dm.org/legastero/xmpp-uri.png)](https://david-dm.org/legastero/xmpp-uri)
-[![devDependency Status](https://david-dm.org/legastero/xmpp-uri/dev-status.png)](https://david-dm.org/legastero/xmpp-uri#info=devDependencies)
+[![Build Status](https://travis-ci.org/otalk/xmpp-uri.png)](https://travis-ci.org/otalk/xmpp-uri)
+[![Dependency Status](https://david-dm.org/otalk/xmpp-uri.png)](https://david-dm.org/otalk/xmpp-uri)
+[![devDependency Status](https://david-dm.org/otalk/xmpp-uri/dev-status.png)](https://david-dm.org/otalk/xmpp-uri#info=devDependencies)
 
-[![Browser Support](https://ci.testling.com/legastero/xmpp-uri.png)](https://ci.testling.com/legastero/xmpp-uri)
+[![Browser Support](https://ci.testling.com/otalk/xmpp-uri.png)](https://ci.testling.com/otalk/xmpp-uri)
 
 ## What is this?
 
