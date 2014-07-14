@@ -44,10 +44,21 @@ Most use cases will be with `xmpp:` URIs, but you can also use `xmpp://` to spec
 a specific account to use for the action:
 
 ```javascript
-var res = xmppuri.parse('xmpp://me@example.com/user@example.com?subscribe');
+var res = xmppuri.parse('xmpp://me@example.com/user@example.com/res?subscribe');
 // res == {
-//     account: 'me@example.com',
-//     jid: 'user@example.com',
+//     account: {
+//         local: 'me',
+//         domain: 'example.com',
+//         bare: 'me@example.com',
+//         full: 'me@example.com'
+//     },
+//     jid: {
+//         local: 'user',
+//         domain: 'example.com',
+//         resource: 'res',
+//         bare: 'user@example.com',
+//         full: 'user@example.com/res'
+//     },
 //     action: 'subscribe'
 // }
 ```
