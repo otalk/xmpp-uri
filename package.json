@@ -1,7 +1,7 @@
 {
   "name": "xmpp-uri",
   "description": "Parse XMPP URIs",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Lance Stout <lance@andyet.net>",
   "bugs": "https://github.com/otalk/xmpp-uri/issues",
   "dependencies": {
