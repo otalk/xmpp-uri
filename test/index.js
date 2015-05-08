@@ -1,6 +1,11 @@
 var test = require('tape');
 var xmppuri = require('../');
 
+test('Wrong protocol', function (t) {
+    var res = xmppuri.parse('https://example.com');
+    t.equal(res, false);
+    t.end();
+});
 
 test('JID only', function (t) {
     var res = xmppuri.parse('xmpp:user@example.com');

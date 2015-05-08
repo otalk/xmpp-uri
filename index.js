@@ -9,6 +9,10 @@ exports.parse = function (xmppURI) {
     var queryType = null;
     var parameters = {};
 
+    if (parsed.protocol !== 'xmpp:') {
+        return false;
+    }
+
     if (query) {
         queryType = query.split(';', 1)[0];
         query = query.slice(queryType.length + 1);
